@@ -1,0 +1,110 @@
+'use client';
+
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
+
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const navItems = ['PROTOCOLS', 'FOR BRANDS', 'TERRACE 4', 'ABOUT', 'JOURNAL', 'CONTACT'];
+
+  return (
+    <header className="w-full absolute top-0 left-0 z-50">
+      <div className="container mx-auto px-4 md:px-8 flex items-center justify-between py-6 relative z-[60]">
+        <div className="flex flex-col">
+         <div className="font-futura text-[10px] md:text-xs tracking-widest text-pr-dark uppercase">THE P.R. LAB</div>
+          <div className="text-[8px] md:text-[10px] text-pr-grey mt-1 tracking-[0.18em] md:tracking-normal">
+            WHERE BEAUTY MEETS PROOF
+          </div>
+        </div>
+
+        {/* Desktop Navigation */}
+       <nav className="hidden lg:flex gap-7 text-[9px] uppercase tracking-wider items-center">
+          {navItems.map((item) => (
+            <a key={item} className="nav-link text-pr-grey transition-colors duration-300 ease-out">
+              {item}
+            </a>
+          ))}
+        </nav>
+
+        <div className="hidden lg:block">
+          <button
+            type="button"
+            className="px-4 py-2 border border-pr-cream text-pr-cream text-xs tracking-widest uppercase rounded transition-all hover:bg-pr-cream hover:text-pr-dark"
+          >
+            Book Appointment
+          </button>
+        </div>
+
+        {/* Mobile Hamburger Button */}
+        {isOpen ? (
+          <button
+            type="button"
+            onClick={toggleMenu}
+            className="menu-toggle lg:hidden"
+            aria-label="Close menu"
+            aria-expanded="true"
+          >
+            <span className="menu-toggle-trace" />
+            <span className="menu-toggle-ripple" />
+            <X size={22} className="relative z-10 text-pr-dark transition-transform duration-300 ease-out" />
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={toggleMenu}
+            className="menu-toggle lg:hidden"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span className="menu-toggle-trace" />
+            <span className="menu-toggle-ripple" />
+            <Menu size={22} className="relative z-10 text-pr-dark transition-transform duration-300 ease-out" />
+          </button>
+        )}
+      </div>
+
+      {/* Mobile Dropdown Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            <motion.button
+              type="button"
+              className="lg:hidden fixed inset-0 z-40 bg-pr-black/18 backdrop-blur-[6px]"
+              aria-label="Close menu overlay"
+              onClick={toggleMenu}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.24, ease: 'easeOut' }}
+            />
+            <motion.div
+              id="site-mobile-menu"
+              className="mobile-menu-panel lg:hidden fixed top-[76px] left-4 right-4 z-50 border border-white/35 shadow-[0_24px_70px_rgba(42,36,32,0.2)]"
+              initial={{ opacity: 0, y: -12, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -8, scale: 0.98 }}
+              transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <nav className="flex flex-col gap-1 px-3 py-4">
+                {navItems.map((item) => (
+                  <a key={item} className="nav-link-mobile text-pr-grey py-3 px-4 text-xs uppercase tracking-[0.24em]">
+                    {item}
+                  </a>
+                ))}
+                <button
+                  type="button"
+                  className="mt-3 px-4 py-3 border border-pr-dark/65 text-pr-dark text-[10px] tracking-[0.24em] uppercase transition-all duration-300 ease-out hover:bg-pr-dark hover:text-pr-cream active:scale-[0.99]"
+                >
+                  Book Appointment
+                </button>
+              </nav>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}
