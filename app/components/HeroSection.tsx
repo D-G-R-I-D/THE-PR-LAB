@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import Ecosystem from './Ecosystem';
+import WhoWeAre from './WhoWeAre';
 
 const HeroSection = () => {
   const containerVariants = {
@@ -136,67 +137,6 @@ const HeroSection = () => {
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
         />
       </motion.div>
-      </section>
-
-      {/* WHO WE ARE */}
-      <section className="who-we-are relative w-full bg-white py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-8">
-          <motion.div variants={containerVariants} initial="hidden" animate="visible" className="max-w-4xl mx-auto text-center">
-            <motion.h2 variants={itemVariants} className="font-futura text-3xl md:text-4xl tracking-[0.18em] mb-4">
-              BEYOND TREATMENT
-            </motion.h2>
-            <motion.p variants={itemVariants} className="font-editorial text-base md:text-lg text-pr-black/80 leading-relaxed mb-6">
-              THE P.R. LAB operates at the intersection of beauty evidence, aesthetic testing, clinical communication, and structured skin progression.
-            </motion.p>
-            <motion.p variants={itemVariants} className="font-editorial text-base md:text-lg text-pr-black/80 leading-relaxed mb-8">
-              We bridge measurable skin outcomes with beauty intelligence through protocol-led systems designed for individuals and beauty industry stakeholders.
-            </motion.p>
-
-            <motion.div variants={itemVariants} className="flex items-center justify-center">
-              <Image
-                src="/images/picture1.png"
-                alt="THE P.R. LAB seal"
-                width={112}
-                height={112}
-                className="w-20 h-20 md:w-28 md:h-28 object-contain"
-                priority={false}
-              />
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ECOSYSTEM */}
-      <section className="ecosystem relative w-full bg-[transparent] py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-8">
-          <motion.div variants={containerVariants} initial="hidden" animate="visible" className="max-w-6xl mx-auto">
-            <motion.h3 variants={itemVariants} className="font-futura text-2xl md:text-3xl tracking-[0.12em] text-center mb-8">THE P.R. LAB ECOSYSTEM</motion.h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <motion.div variants={itemVariants} className="ecosystem-card p-6 border border-pr-cream/40 bg-white/60 rounded-md">
-                <h4 className="font-futura text-sm tracking-widest text-pr-nude mb-4">INDIVIDUALS</h4>
-                <ul className="list-disc list-inside space-y-2 font-editorial text-sm text-pr-grey/85">
-                  <li>Single Session Protocols</li>
-                  <li>Skin Foundations</li>
-                  <li>Visible Glow</li>
-                  <li>Transformation Programs</li>
-                  <li>Elite Membership</li>
-                </ul>
-              </motion.div>
-
-              <motion.div variants={itemVariants} className="ecosystem-card p-6 border border-pr-cream/40 bg-white/60 rounded-md">
-                <h4 className="font-futura text-sm tracking-widest text-pr-nude mb-4">BRANDS & INDUSTRY</h4>
-                <ul className="list-disc list-inside space-y-2 font-editorial text-sm text-pr-grey/85">
-                  <li>Product Evaluation</li>
-                  <li>Testing Frameworks</li>
-                  <li>Beauty Communications</li>
-                  <li>Claims Guidance</li>
-                  <li>Market Integration</li>
-                </ul>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
       </section>
     </>
   );
