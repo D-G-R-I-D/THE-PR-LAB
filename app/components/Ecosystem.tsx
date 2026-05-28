@@ -27,7 +27,7 @@ const itemVariants = {
 
 const Ecosystem = () => {
   return (
-    <section className="ecosystem relative w-full bg-[transparent] py-16 md:py-24">
+    <section id="ecosystem" className="ecosystem relative w-full bg-[transparent] py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="max-w-6xl mx-auto">
           <motion.h3 variants={itemVariants} className="font-futura text-2xl md:text-3xl tracking-[0.12em] text-center mb-8">

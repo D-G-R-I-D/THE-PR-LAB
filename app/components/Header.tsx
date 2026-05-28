@@ -8,7 +8,14 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const navItems = ['PROTOCOLS', 'FOR BRANDS', 'TERRACE 4', 'ABOUT', 'JOURNAL', 'CONTACT'];
+  const navItems = [
+    { label: 'PROTOCOLS', href: '#protocol-menu' },
+    { label: 'FOR BRANDS', href: '#ecosystem' },
+    { label: 'TERRACE 4', href: '#terrace-4' },
+    { label: 'ABOUT', href: '#who-we-are' },
+    { label: 'JOURNAL', href: '#journal' },
+    { label: 'CONTACT', href: '#book-appointment' },
+  ];
 
   return (
     <header className="w-full absolute top-0 left-0 z-50">
@@ -23,19 +30,19 @@ export default function Header() {
         {/* Desktop Navigation */}
        <nav className="hidden lg:flex gap-7 text-[9px] uppercase tracking-wider items-center">
           {navItems.map((item) => (
-            <a key={item} className="nav-link text-pr-grey transition-colors duration-300 ease-out">
-              {item}
+            <a key={item.label} href={item.href} className="nav-link text-pr-grey transition-colors duration-300 ease-out">
+              {item.label}
             </a>
           ))}
         </nav>
 
         <div className="hidden lg:block">
-          <button
-            type="button"
+          <a
+            href="#book-appointment"
             className="px-4 py-2 border border-pr-cream text-pr-cream text-xs tracking-widest uppercase rounded transition-all hover:bg-pr-cream hover:text-pr-dark"
           >
             Book Appointment
-          </button>
+          </a>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -90,16 +97,22 @@ export default function Header() {
             >
               <nav className="flex flex-col gap-1 px-3 py-4">
                 {navItems.map((item) => (
-                  <a key={item} className="nav-link-mobile text-pr-grey py-3 px-4 text-xs uppercase tracking-[0.24em]">
-                    {item}
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="nav-link-mobile text-pr-grey py-3 px-4 text-xs uppercase tracking-[0.24em]"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
                   </a>
                 ))}
-                <button
-                  type="button"
+                <a
+                  href="#book-appointment"
                   className="mt-3 px-4 py-3 border border-pr-dark/65 text-pr-dark text-[10px] tracking-[0.24em] uppercase transition-all duration-300 ease-out hover:bg-pr-dark hover:text-pr-cream active:scale-[0.99]"
+                  onClick={() => setIsOpen(false)}
                 >
                   Book Appointment
-                </button>
+                </a>
               </nav>
             </motion.div>
           </>

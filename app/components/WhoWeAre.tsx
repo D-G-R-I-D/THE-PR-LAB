@@ -28,7 +28,7 @@ const itemVariants = {
 
 const WhoWeAre = () => {
   return (
-    <section className="who-we-are relative w-full bg-white py-16 md:py-24">
+    <section id="who-we-are" className="who-we-are relative w-full bg-white py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="max-w-4xl mx-auto text-center">
           <motion.h2 variants={itemVariants} className="font-futura text-3xl md:text-4xl tracking-[0.18em] mb-4">

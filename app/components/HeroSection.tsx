@@ -1,8 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Ecosystem from './Ecosystem';
-import WhoWeAre from './WhoWeAre';
 
 const HeroSection = () => {
   const containerVariants = {
@@ -88,23 +86,21 @@ const HeroSection = () => {
             {/* CTA Buttons */}
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 md:gap-6">
               <motion.a
-                href="https://calendly.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#book-appointment"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-pr-cream text-pr-dark font-body text-xs md:text-sm tracking-wider uppercase transition-luxury border border-pr-cream hover:bg-pr-cream/90"
               >
                 Book Appointment
               </motion.a>
-              <motion.button
-                type="button"
+              <motion.a
+                href="#protocol-menu"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 border border-pr-cream text-pr-cream font-body text-xs md:text-sm tracking-wider uppercase transition-luxury hover:bg-pr-cream hover:text-pr-dark"
               >
                 Explore Protocols
-              </motion.button>
+              </motion.a>
             </motion.div>
 
             {/* Certification area */}
