@@ -1,11 +1,35 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const [isHoveringTop, setIsHoveringTop] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Calculate opacity: fade out completely after 100px of scrolling
+  const logoOpacity = Math.max(0, 1 - scrollY / 100);
+  const navOpacity = isHoveringTop ? 1 : Math.max(0, 1 - scrollY / 50);
+
+  // Update CSS variables on header element
+  useEffect(() => {
+    if (headerRef.current) {
+      headerRef.current.style.setProperty('--logo-opacity', String(logoOpacity));
+      headerRef.current.style.setProperty('--nav-opacity', String(navOpacity));
+    }
+  }, [logoOpacity, navOpacity]);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const navItems = [
@@ -18,9 +42,14 @@ export default function Header() {
   ];
 
   return (
-    <header className="w-full absolute top-0 left-0 z-50">
+    <header 
+      ref={headerRef}
+      className="w-full fixed top-0 left-0 z-50"
+      onMouseEnter={() => setIsHoveringTop(true)}
+      onMouseLeave={() => setIsHoveringTop(false)}
+    >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between py-6 relative z-[60]">
-        <div className="flex flex-col">
+        <div className="flex flex-col pointer-events-none header-logo">
          <div className="font-futura text-[10px] md:text-xs tracking-widest text-pr-dark uppercase">THE P.R. LAB</div>
           <div className="text-[8px] md:text-[10px] text-pr-grey mt-1 tracking-[0.18em] md:tracking-normal">
             WHERE BEAUTY MEETS PROOF
@@ -28,7 +57,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-       <nav className="hidden lg:flex gap-7 text-[9px] uppercase tracking-wider items-center">
+       <nav className="hidden lg:flex gap-7 text-[9px] uppercase tracking-wider items-center header-nav">
           {navItems.map((item) => (
             <a key={item.label} href={item.href} className="nav-link text-pr-grey transition-colors duration-300 ease-out">
               {item.label}
@@ -36,7 +65,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:block header-nav">
           <a
             href="#book-appointment"
             className="px-4 py-2 border border-pr-cream text-pr-cream text-xs tracking-widest uppercase rounded transition-all hover:bg-pr-cream hover:text-pr-dark"

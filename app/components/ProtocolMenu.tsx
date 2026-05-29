@@ -51,7 +51,7 @@ const ProtocolMenu = () => {
     <section id="protocol-menu" className="relative w-full bg-pr-black text-pr-cream py-16 md:py-24 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-10 lg:gap-16 items-start">
-          <div className="lg:sticky lg:top-28">
+          <div className="hidden lg:block lg:sticky lg:top-28">
             <p className="font-body text-[0.65rem] uppercase tracking-[0.32em] text-pr-nude/70 mb-4">Protocol Menu</p>
             <h2 className="font-futura text-4xl md:text-6xl lg:text-7xl leading-[0.9] tracking-[0.02em] max-w-xl">
               TREATMENT AS PROOF
@@ -116,6 +116,17 @@ const ProtocolMenu = () => {
                               </li>
                             ))}
                           </ul>
+                        </div>
+                        {/* Mobile image - only visible on screens smaller than lg */}
+                        <div className="lg:hidden mt-6 relative aspect-[0.72] max-w-sm md:max-w-sm overflow-hidden border border-pr-cream/15 bg-pr-cream/5">
+                          <Image
+                            src={protocol.image}
+                            alt={`${protocol.title} visual`}
+                            fill
+                            sizes="(min-width: 768px) 400px, 80vw"
+                            className="object-cover object-top opacity-75"
+                          />
+                          <div className="absolute inset-0 bg-pr-black/15" />
                         </div>
                       </motion.div>
                     )}
