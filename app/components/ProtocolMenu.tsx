@@ -11,35 +11,35 @@ const protocols = [
     eyebrow: '01 / Immediate clarity',
     summary: 'Targeted studio treatments for a specific skin objective, event, or reset moment.',
     details: ['Express skin read', 'Focused aesthetic treatment', 'Post-session care direction'],
-    image: '/images/hero-desktop1.jpg',
+    image: '/images/SS .png',
   },
   {
     title: 'Skin Foundations',
     eyebrow: '02 / Baseline work',
     summary: 'A measured starting point for skin health, routine structure, and visible consistency.',
     details: ['Barrier support', 'Routine audit', 'Progress markers'],
-    image: '/images/webhero1.jpg',
+    image: '/images/Pictures10.png',
   },
   {
     title: 'Visible Glow',
     eyebrow: '03 / Radiance system',
     summary: 'A brightening and refinement path for texture, tone, luminosity, and polish.',
     details: ['Glow-focused treatment rhythm', 'Hydration and texture support', 'Event-ready finish'],
-    image: '/images/hero-mobile1.jpg',
+    image: '/images/Pictures4.png',
   },
   {
     title: 'Transformation',
     eyebrow: '04 / Structured change',
     summary: 'A progressive program for complex concerns that need consistency and evidence-led review.',
     details: ['Multi-session plan', 'Before-and-after checkpoints', 'Protocol adjustments'],
-    image: '/images/hero-desktop.jpg',
+    image: '/images/Pictures3.png',
   },
   {
     title: 'Elite Membership',
     eyebrow: '05 / Ongoing proof',
     summary: 'A high-touch continuity model for clients who want regular skin intelligence and maintenance.',
     details: ['Priority scheduling', 'Monthly protocol rhythm', 'Long-term skin documentation'],
-    image: '/images/webhero.jpg',
+    image: '/images/Innercircle4.png',
   },
 ];
 
@@ -56,15 +56,15 @@ const ProtocolMenu = () => {
             <h2 className="font-futura text-4xl md:text-6xl lg:text-7xl leading-[0.9] tracking-[0.02em] max-w-xl">
               TREATMENT AS PROOF
             </h2>
-            <div className="mt-8 relative aspect-[4/5] max-w-sm overflow-hidden border border-pr-cream/15">
+            <div className="mt-8 relative aspect-[0.72] max-w-sm overflow-hidden border border-pr-cream/15 bg-pr-cream/5">
               <Image
                 src={activeProtocol.image}
-                alt=""
+                alt={`${activeProtocol.title} visual`}
                 fill
                 sizes="(min-width: 1024px) 320px, 80vw"
-                className="object-cover grayscale opacity-55"
+                className="object-cover object-top opacity-75"
               />
-              <div className="absolute inset-0 bg-pr-black/25" />
+              <div className="absolute inset-0 bg-pr-black/15" />
             </div>
           </div>
 

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const containerVariants = {
@@ -33,6 +34,16 @@ const Ecosystem = () => {
           <motion.h3 variants={itemVariants} className="font-futura text-2xl md:text-3xl tracking-[0.12em] text-center mb-8">
             THE P.R. LAB ECOSYSTEM
           </motion.h3>
+
+          <motion.div variants={itemVariants} className="relative mx-auto mb-10 aspect-square w-full max-w-3xl overflow-hidden border border-pr-cream bg-white shadow-[0_18px_60px_rgba(77,68,61,0.12)]">
+            <Image
+              src="/images/Pr lab card back .png"
+              alt="THE P.R. LAB ecosystem"
+              fill
+              sizes="(min-width: 768px) 720px, 100vw"
+              className="object-cover"
+            />
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div variants={itemVariants} className="ecosystem-card p-6 border border-pr-cream/40 bg-white/60 rounded-md">

@@ -10,7 +10,7 @@ export default function Header() {
   const toggleMenu = () => setIsOpen(!isOpen);
   const navItems = [
     { label: 'PROTOCOLS', href: '#protocol-menu' },
-    { label: 'FOR BRANDS', href: '#ecosystem' },
+    { label: 'FOR BRANDS', href: '#brands-industry' },
     { label: 'TERRACE 4', href: '#terrace-4' },
     { label: 'ABOUT', href: '#who-we-are' },
     { label: 'JOURNAL', href: '#journal' },
