@@ -303,7 +303,7 @@ const SuccessStories = () => {
                   type="button"
                   className={`${styles.imageButton} ${styles[story.shape]}`}
                   onClick={() => toggleStory(storyKey, isExpanded)}
-                  aria-expanded={isExpanded ? 'true' : 'false'}
+                  // aria-expanded={isExpanded === true}
                   aria-label={`${isExpanded ? 'Collapse' : 'Read'} ${story.name}`}
                 >
                   <img
@@ -319,7 +319,7 @@ const SuccessStories = () => {
                   type="button"
                   className={styles.thoughtBubble}
                   onClick={() => toggleStory(storyKey, isExpanded)}
-                  aria-expanded={isExpanded ? 'true' : 'false'}
+                  // aria-expanded={!!isExpanded}
                 >
                   <span className="mb-2 block font-body text-[0.62rem] uppercase tracking-[0.24em] text-pr-grey/65">
                     {story.name}
