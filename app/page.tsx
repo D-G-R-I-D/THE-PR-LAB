@@ -6,6 +6,7 @@ import B2B from './components/B2B';
 import Clinical from './components/Clinical';
 import VerifiedByProof from './components/VerifiedByProof';
 import Terrace4 from './components/Terrace4';
+import SuccessStories from './components/SuccessStories';
 import BookAppointment from './components/BookAppointment';
 
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Clinical />
       <VerifiedByProof />
       <Terrace4 />
+      <SuccessStories />
       <BookAppointment />
     </main>
   );
