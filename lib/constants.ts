@@ -132,8 +132,9 @@ export const FOOTER_LINKS = [
 ];
 
 export const SOCIALS = {
-  instagram: 'https://instagram.com/theprlab',
-  whatsapp: 'https://wa.me',
+  instagram: 'https://instagram.com/theprlabafrica',
+  whatsapp: 'https://wa.me/7036284931',
+  x: 'https://twitter.com/theprlabafrica',
   calendly: 'https://calendly.com',
 };
 

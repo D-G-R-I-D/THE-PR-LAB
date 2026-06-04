@@ -1,14 +1,17 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 export default function Header() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [isHoveringTop, setIsHoveringTop] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
+  const sectionHref = (hash: string) => (pathname === '/' ? hash : `/${hash}`);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,12 +36,12 @@ export default function Header() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const navItems = [
-    { label: 'PROTOCOLS', href: '#protocol-menu' },
-    { label: 'FOR BRANDS', href: '#brands-industry' },
-    { label: 'TERRACE 4', href: '#terrace-4' },
-    { label: 'ABOUT', href: '#who-we-are' },
-    { label: 'JOURNAL', href: '#journal' },
-    { label: 'CONTACT', href: '#book-appointment' },
+    { label: 'PROTOCOLS', href: sectionHref('#protocol-menu') },
+    { label: 'FOR BRANDS', href: sectionHref('#brands-industry') },
+    { label: 'TERRACE 4', href: sectionHref('#terrace-4') },
+    { label: 'ABOUT', href: sectionHref('#who-we-are') },
+    { label: 'JOURNAL', href: sectionHref('#success-stories') },
+    { label: 'CONTACT', href: sectionHref('#book-appointment') },
   ];
 
   return (
@@ -67,7 +70,7 @@ export default function Header() {
 
         <div className="hidden lg:block header-nav">
           <a
-            href="#book-appointment"
+            href={sectionHref('#book-appointment')}
             className="px-4 py-2 border border-pr-cream text-pr-cream text-xs tracking-widest uppercase rounded transition-all hover:bg-pr-cream hover:text-pr-dark"
           >
             Book Appointment
@@ -136,7 +139,7 @@ export default function Header() {
                   </a>
                 ))}
                 <a
-                  href="#book-appointment"
+                  href={sectionHref('#book-appointment')}
                   className="mt-3 px-4 py-3 border border-pr-dark/65 text-pr-dark text-[10px] tracking-[0.24em] uppercase transition-all duration-300 ease-out hover:bg-pr-dark hover:text-pr-cream active:scale-[0.99]"
                   onClick={() => setIsOpen(false)}
                 >

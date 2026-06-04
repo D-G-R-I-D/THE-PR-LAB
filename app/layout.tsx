@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
 import Header from '@/app/components/Header';
+import Footer from '@/app/components/Footer';
 
 export const metadata: Metadata = {
   title: 'THE P.R. LAB - Where Beauty Meets Proof',
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className="bg-pr-cream text-pr-dark font-body">
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
