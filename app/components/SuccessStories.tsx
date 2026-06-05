@@ -303,7 +303,7 @@ const SuccessStories = () => {
                   type="button"
                   className={`${styles.imageButton} ${styles[story.shape]}`}
                   onClick={() => toggleStory(storyKey, isExpanded)}
-                  // aria-expanded={!!isExpanded}
+                  // aria-expanded={isExpanded === true}
                   aria-label={`${isExpanded ? 'Collapse' : 'Read'} ${story.name}`}
                 >
                   <img
