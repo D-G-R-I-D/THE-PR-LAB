@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ArrowUpRight, CalendarDays, Camera, Globe2, MessageCircle, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, CalendarDays, Globe2, ShieldCheck } from 'lucide-react';
 import { SITE_NAME, SITE_TAGLINE, SITE_URL, SOCIALS } from '@/lib/constants';
-
+import { TwitterXIcon, LinkedInIcon, WhatsAppIcon, InstagramIcon, YouTubeIcon, PinterestIcon } from "./SocialIcons";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -19,10 +19,12 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { label: 'Instagram', href: SOCIALS.instagram, icon: Camera },
-    { label: 'WhatsApp', href: SOCIALS.whatsapp, icon: MessageCircle },
-    { label: 'X', href: SOCIALS.x, icon: CalendarDays },
-    { label: 'Calendly', href: SOCIALS.calendly, icon: CalendarDays },
+    { label: 'Instagram', href: SOCIALS.instagram, icon: InstagramIcon },
+    { label: 'WhatsApp', href: SOCIALS.whatsapp, icon: WhatsAppIcon },
+    { label: 'X', href: SOCIALS.x, icon: TwitterXIcon },    
+    { label: 'linkedIn', href: SOCIALS.linkedln, icon: LinkedInIcon },
+    { label: 'YouTube', href:SOCIALS.youtube, icon: YouTubeIcon },
+    { label: 'Calendly', href: SOCIALS.calendly, icon: CalendarDays }
   ];
 
   return (

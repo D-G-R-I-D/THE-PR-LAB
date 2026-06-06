@@ -1,6 +1,18 @@
 import Link from 'next/link';
+import { SITE_URL, SOCIALS } from '@/lib/constants'
 
 const lastUpdated = 'June 4, 2026';
+const mailSubject = "P.R. LAB WEB";
+const cc = "";
+const bcc = "chukwudid344@gmail.com";
+const mailBody = encodeURIComponent(
+  `Hello,\n\n` +
+  `I am interested in learning more about your services at P.R. LAB.\n\n` +
+  `Could you please provide more information or help me schedule an appointment?\n\n` +
+  `Thank you,\nLooking forward to hearing from you.`
+);
+const mailBox = `mailto:${SOCIALS.mailBox}?subject=${encodeURIComponent(mailSubject)}&body=${mailBody}&cc=${cc}&bcc=${bcc}`;
+//&cc=${cc}&bcc=${bcc}
 
 export default function PrivacyPolicy() {
   return (
@@ -97,8 +109,8 @@ export default function PrivacyPolicy() {
             </p>
             <div className="border-t border-pr-grey/20 pt-5 text-sm leading-7 text-pr-grey">
               <p><strong className="text-pr-dark">THE P.R. LAB</strong></p>
-              <p>Email: info@theprlabafrica.co</p>
-              <p>Website: www.theprlabafrica.co</p>
+              <p><a href={mailBox}>Email: info@theprlabafrica.co</a></p>
+              <a href={SITE_URL} >Website: www.theprlabafrica.co</a>
             </div>
           </section>
         </div>

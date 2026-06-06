@@ -121,7 +121,7 @@ export const FOOTER_LINKS = [
   },
   {
     label: 'Instagram',
-    href: 'https://instagram.com',
+    href: 'https://instagram.com/theprlabafrica',
     external: true,
   },
   {
@@ -136,6 +136,9 @@ export const SOCIALS = {
   whatsapp: 'https://wa.me/7036284931',
   x: 'https://twitter.com/theprlabafrica',
   calendly: 'https://calendly.com',
+  linkedln: 'https://www.linkedin.com/in/the-p-r-lab-africa-337a89410/',
+  youtube: 'https://youtube.com/@theprlabafrica',
+  mailBox: 'theprlabafrica@gmail.com'
 };
 
 export const CLINIC_INFO = {
