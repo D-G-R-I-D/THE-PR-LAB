@@ -129,3 +129,25 @@ export const PinterestIcon = React.forwardRef<SVGSVGElement, IconProps>(
   )
 );
 PinterestIcon.displayName = 'PinterestIcon';
+
+export const TikTokIcon = React.forwardRef<SVGSVGElement, IconProps>(
+  ({ size = 24, ...props }, ref) => (
+    <svg
+      ref={ref}
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"   // ✅ use fill for logos  
+      xmlns="http://www.w3.org/2000/svg"
+      // stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M12 2h2.5c.1 1.3.6 2.5 1.5 3.5s2.2 1.4 3.5 1.5V9c-1.5 0-3-.5-4.2-1.4v6.6c0 2.9-2.4 5.3-5.3 5.3S4.2 17.1 4.2 14.2c0-2.4 1.6-4.4 3.8-5v2.6c-.7.4-1.2 1.2-1.2 2.1 0 1.3 1.1 2.4 2.4 2.4s2.4-1.1 2.4-2.4V2z" />
+    </svg>
+  )
+);
+
+TikTokIcon.displayName = "TikTokIcon";

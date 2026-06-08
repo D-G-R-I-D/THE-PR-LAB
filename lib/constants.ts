@@ -133,13 +133,14 @@ export const FOOTER_LINKS = [
 
 export const SOCIALS = {
   instagram: 'https://instagram.com/theprlabafrica',
-  whatsapp: 'https://wa.me/7036284931',
+  whatsapp: 'https://wa.me/9123750327',
   x: 'https://twitter.com/theprlabafrica',
   calendly: 'https://calendly.com',
   linkedln: 'https://www.linkedin.com/in/the-p-r-lab-africa-337a89410/',
   youtube: 'https://youtube.com/@theprlabafrica',
   mailBox: 'theprlabafrica@gmail.com',
-  pinterest: 'https://pinterest.com/theprlabafrica/'
+  pinterest: 'https://pinterest.com/theprlabafrica/',
+  tiktok: 'https://www.tiktok.com/@theprlabafrica'
 };
 
 export const CLINIC_INFO = {

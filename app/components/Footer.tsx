@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ArrowUpRight, CalendarDays, Globe2, ShieldCheck } from 'lucide-react';
 import { SITE_NAME, SITE_TAGLINE, SITE_URL, SOCIALS } from '@/lib/constants';
-import { TwitterXIcon, LinkedInIcon, WhatsAppIcon, InstagramIcon, YouTubeIcon, PinterestIcon } from "./SocialIcons";
+import { TwitterXIcon, LinkedInIcon, WhatsAppIcon, InstagramIcon, YouTubeIcon, PinterestIcon, TikTokIcon } from "./SocialIcons";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -25,6 +25,7 @@ export default function Footer() {
     { label: 'linkedIn', href: SOCIALS.linkedln, icon: LinkedInIcon },
     { label: 'YouTube', href:SOCIALS.youtube, icon: YouTubeIcon },
     { label: 'Pinterest', href: SOCIALS.pinterest, icon: PinterestIcon },
+    { label: 'TikTok', href: SOCIALS.tiktok, icon: TikTokIcon },
     { label: 'Calendly', href: SOCIALS.calendly, icon: CalendarDays }
   ];
 
@@ -72,6 +73,29 @@ export default function Footer() {
             <p className="max-w-xl font-body text-sm leading-7 text-pr-cream/66">
               Aesthetic protocols, documented skin performance, and strategic beauty communications for clients, founders, and industry partners who need clarity with polish.
             </p>
+
+            <div className="mt-12 pt-8 border-t border-pr-cream/14">
+              <p className="mb-3 font-body text-[0.62rem] uppercase tracking-[0.34em] text-pr-nude/62">
+                Visit Our Studio
+              </p>
+              <address className="not-italic">
+                <p className="font-body text-sm leading-6 text-pr-cream/78">
+                  7/9 Adesegun Okunnuga<br />
+                  Off Freedom Way<br />
+                  Lekki, Lagos<br />
+                  Nigeria
+                </p>
+              </address>
+              <a
+                href="https://www.google.com/maps/search/7%2F9+Adesegun+Okunnuga+Freedom+Way+Lekki+Lagos+Nigeria"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group mt-4 inline-flex items-center gap-2 font-body text-[0.68rem] uppercase tracking-[0.22em] text-pr-cream/70 transition-colors duration-300 hover:text-pr-cream"
+              >
+                Open in Maps
+                <ArrowUpRight size={12} className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+              </a>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 lg:min-h-[30rem]">
