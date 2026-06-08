@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle, Mailbox } from 'lucide-react';
 import { SOCIALS } from '@/lib/constants'
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error';
@@ -199,7 +199,8 @@ export default function ContactForm() {
               <div className="pt-4 border-t border-pr-cream">
                 <p className="text-[0.7rem] uppercase tracking-[0.2em] text-pr-grey/50 mb-3">Direct Contact</p>
                 <a href={mailBox} className="text-sm text-pr-dark hover:text-pr-black transition-colors">
-                  theprlabafrica@gmail.com
+                  {/* {SOCIALS.mailBox} */}
+                  <p><Mailbox size={40} className="text-pr-dark flex-shrink-0 mt-0.5" />👆🏽</p>
                 </a>
               </div>
             </div>

@@ -26,7 +26,7 @@ const Clinical = () => {
               </h2>
               <div className="my-8 h-px w-16 bg-pr-grey/34" />
               <p className="font-editorial text-2xl md:text-4xl leading-tight text-pr-grey/86">
-                The P.R. LAB collaborates with THE AESTHETIC CLINIC in advancing structured aesthetic pathways and elevated skin health experiences.
+                THE P.R. LAB collaborates with THE AESTHETIC CLINIC in advancing structured aesthetic pathways and elevated skin health experiences.
               </p>
             </div>
           </div>

@@ -138,7 +138,8 @@ export const SOCIALS = {
   calendly: 'https://calendly.com',
   linkedln: 'https://www.linkedin.com/in/the-p-r-lab-africa-337a89410/',
   youtube: 'https://youtube.com/@theprlabafrica',
-  mailBox: 'theprlabafrica@gmail.com'
+  mailBox: 'theprlabafrica@gmail.com',
+  pinterest: 'https://pinterest.com/theprlabafrica/'
 };
 
 export const CLINIC_INFO = {

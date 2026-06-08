@@ -57,7 +57,7 @@ const HeroSection = () => {
               variants={itemVariants}
               className="font-editorial text-sm md:text-[2rem] text-pr-black/75 mb-6 md:mb-8 max-w-md leading-relaxed.block lg:pl-[12.9%] pl-[10%]"
             >
-              <span className="font-editorial text-[1.3rem] md:text-[2rem] text-pr-black/75 leading-relaxed"> Hybrid Aesthetic Testing & </span>
+              <span className="font-editorial text-[1.3rem] md:text-[2rem] text-pr-black/75 leading-relaxed"> A Hybrid Aesthetic Testing & </span>
               <br />
               <span className="font-editorial text-[1.1em] md:text-[1.5rem] text-pr-black/75 mb-6 pl-[0%] leading-none.block">Communications Studio by MCE Media</span>
             </motion.p>

@@ -6,7 +6,7 @@ const VerifiedByProof = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="mx-auto grid max-w-6xl grid-cols-1 md:grid-cols-[0.86fr_1.14fr] gap-10 md:gap-14 items-center">
           <div className="grid grid-cols-[1fr] gap-4 items-end lg:pr-10">
-            <div className="relative flex h-58 w-58 aspect-square items-center justify-center justify-self-center lg:justify-self-end border border-pr-cream/18 bg-pr-cream/5 p-4">
+            <div className="relative flex h-58 w-58 aspect-square items-center justify-center justify-self-center lg:justify-self-end p-4">
               <Image
                 src="/images/picture1.png"
                 alt="THE P.R. LAB certification seal"
@@ -18,7 +18,7 @@ const VerifiedByProof = () => {
             {/* <div className="relative aspect-[0.8] border border-pr-cream/18 bg-pr-cream/5">
               <Image
                 src="/images/Pictures4.png"
-                alt="THE P.R. LAB testing and certification page"
+                alt="THE P.R. LAB testing and certification pa  ge"
                 fill
                 sizes="(min-width: 768px) 24vw, 48vw"
                 className="object-cover object-top"

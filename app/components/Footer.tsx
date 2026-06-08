@@ -24,6 +24,7 @@ export default function Footer() {
     { label: 'X', href: SOCIALS.x, icon: TwitterXIcon },    
     { label: 'linkedIn', href: SOCIALS.linkedln, icon: LinkedInIcon },
     { label: 'YouTube', href:SOCIALS.youtube, icon: YouTubeIcon },
+    { label: 'Pinterest', href: SOCIALS.pinterest, icon: PinterestIcon },
     { label: 'Calendly', href: SOCIALS.calendly, icon: CalendarDays }
   ];
 
@@ -59,7 +60,7 @@ export default function Footer() {
             <p className="mb-5 font-body text-[0.62rem] uppercase tracking-[0.34em] text-pr-nude/62">
               The elite proof studio
             </p>
-            <h2 className="font-editorial text-6xl font-bold leading-[0.84] text-pr-cream sm:text-7xl md:text-8xl">
+            <h2 className="font-editorial text-5xl font-bold leading-[0.84] text-pr-cream sm:text-7xl md:text-7.5xl">
               {SITE_NAME}
             </h2>
             <div className="my-8 grid grid-cols-[5rem_1fr] items-center gap-5">
