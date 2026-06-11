@@ -1,6 +1,6 @@
 # Middleware Configuration for Supabase Session Refresh
 
-The `middleware.ts` file in your project root automatically handles Supabase session refreshing for all routes.
+The `middleware.ts` file in your `app/` directory automatically handles Supabase session refreshing for all routes.
 
 ## How It Works
 
@@ -12,7 +12,7 @@ The middleware:
 
 ## Matcher Configuration
 
-By default, the middleware runs on all routes. To customize which routes it applies to, update `middleware.ts`:
+By default, the middleware runs on all routes. To customize which routes it applies to, update `app/middleware.ts`:
 
 ```typescript
 export const config = {
@@ -25,7 +25,7 @@ export const config = {
 
 ## No Additional Setup Required
 
-Since you already have `middleware.ts` in your project, session refreshing is now automatic!
+Since you have `app/middleware.ts` in your project, session refreshing is now automatic! (Updated to use the modern Next.js middleware location.)
 
 ## What This Enables
 
@@ -37,7 +37,7 @@ With the middleware in place, you can now:
 
 ## Example: Protecting Routes
 
-To add route protection, update your `middleware.ts`:
+To add route protection, update your `app/middleware.ts`:
 
 ```typescript
 import { type NextRequest, NextResponse } from "next/server";

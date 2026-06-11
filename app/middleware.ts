@@ -5,7 +5,6 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 
 export const updateSession = async (request: NextRequest) => {
-  // Create an unmodified response
   let supabaseResponse = NextResponse.next({
     request: {
       headers: request.headers,
@@ -35,8 +34,6 @@ export const updateSession = async (request: NextRequest) => {
     }
   );
 
-  // This refreshes a user's session in case they have one
-  // It's safe to call even if there's no session
   await supabase.auth.getSession();
 
   return supabaseResponse;
@@ -48,8 +45,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Match all routes except static files and images
     "/((?!_next/static|_next/image|favicon.ico).*)",
   ],
 };
-
