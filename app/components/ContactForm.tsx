@@ -168,16 +168,16 @@ function ContactFormContent() {
   );
 }
 
-const mailSubject = "P.R. LAB WEB"
-const bcc = "chukwudid344@gmail.com"
-const cc = ""
+const mailSubject = "P.R. LAB WEB_DIRECT_INQUIRY"
+// const cc = ""
 const mailBody = encodeURIComponent(
   `Hello,\n\n` +
   `I am interested in learning more about your services at P.R. LAB.\n\n` +
   `Could you please provide more information or help me schedule an appointment?\n\n` +
   `Thank you,\nLooking forward to hearing from you.`
 );
-const mailBox = `mailto:${SOCIALS.mailBox}?subject=${encodeURIComponent(mailSubject)}&body=${mailBody}&cc=${cc}&bcc=${bcc}`;
+const mailBox = `mailto:${SOCIALS.mailBox}?subject=${encodeURIComponent(mailSubject)}&body=${mailBody}`;
+//&cc=${cc}&bcc=${bcc}
 
 export default function ContactForm() {
   return (

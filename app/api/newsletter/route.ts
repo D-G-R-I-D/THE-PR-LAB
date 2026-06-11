@@ -184,7 +184,7 @@ async function sendWelcomeEmail(userEmail: string): Promise<boolean> {
 
 async function sendAdminNotification(userEmail: string): Promise<boolean> {
   try {
-    const adminEmail = process.env.ADMIN_EMAIL || 'theprlabafrica@gmail.com';
+    const adminMail1 = process.env.ADMIN_EMAIL1 || 'info@theprlabafrica.co';
     
     // Parse CC emails from environment variable (comma-separated)
     // Example: "admin1@example.com,admin2@example.com"
@@ -194,7 +194,7 @@ async function sendAdminNotification(userEmail: string): Promise<boolean> {
     
     const result = await resend.emails.send({
       from: 'THE P.R. LAB AFRICA <noreply@theprlabafrica.co>',
-      to: adminEmail,
+      to: adminMail1,
       ...(bccEmails.length > 0 && { bcc: bccEmails }),
       subject: 'New Newsletter Subscriber',
       html: `
