@@ -8,7 +8,8 @@ import VerifiedByProof from './components/VerifiedByProof';
 import Terrace4 from './components/Terrace4';
 import SuccessStories from './components/SuccessStories';
 import BookAppointment from './components/BookAppointment';
-import ContactForm from './components/ContactForm'
+import ContactForm from './components/ContactForm';
+import NewsletterSection from './components/NewsletterSection';
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <SuccessStories />
       <BookAppointment />
       <ContactForm />
+      <NewsletterSection />
     </main>
   );
 }

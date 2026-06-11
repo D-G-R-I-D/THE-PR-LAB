@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { ArrowUpRight, CalendarDays, Globe2, ShieldCheck } from 'lucide-react';
 import { SITE_NAME, SITE_TAGLINE, SITE_URL, SOCIALS } from '@/lib/constants';
 import { TwitterXIcon, LinkedInIcon, WhatsAppIcon, InstagramIcon, YouTubeIcon, PinterestIcon, TikTokIcon } from "./SocialIcons";
+import NewsletterSignup from './NewsletterSignup';
 
 export default function Footer() {
   const pathname = usePathname();
@@ -151,34 +152,46 @@ export default function Footer() {
 
             <div className="py-8 sm:px-6 lg:py-16">
               <p className="mb-8 font-futura text-[0.62rem] font-semibold uppercase tracking-[0.24em] text-pr-nude">
-                03 / Trust
+                03 / Updates
               </p>
-              <div className="space-y-5">
-                <div className="flex items-start gap-3 border-b border-pr-cream/10 pb-5">
-                  <ShieldCheck size={17} className="mt-0.5 shrink-0 text-pr-nude/72" aria-hidden="true" />
-                  <p className="font-body text-sm leading-6 text-pr-cream/64">
-                    Client information is handled with discretion across booking, consultation, and follow-up.
-                  </p>
-                </div>
-                <div className="flex items-start gap-3 border-b border-pr-cream/10 pb-5">
-                  <Globe2 size={17} className="mt-0.5 shrink-0 text-pr-nude/72" aria-hidden="true" />
-                  <a
-                    href={SITE_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="break-all font-body text-sm leading-6 text-pr-cream/70 transition-colors duration-300 hover:text-pr-cream"
-                  >
-                    {websiteLabel}
-                  </a>
-                </div>
+              <div className="space-y-6">
                 <div>
-                  <Link
-                    href="/privacy-policy"
-                    className="inline-flex items-center gap-2 font-body text-sm text-pr-cream/70 transition-colors duration-300 hover:text-pr-cream"
-                  >
-                    Privacy Policy
-                    <ArrowUpRight size={12} aria-hidden="true" />
-                  </Link>
+                  <p className="mb-3 font-body text-[0.58rem] uppercase tracking-[0.24em] text-pr-cream/35">
+                    Newsletter
+                  </p>
+                  <p className="mb-4 font-body text-xs leading-5 text-pr-cream/60">
+                    Subscribe for beauty intelligence, research updates, and exclusive content.
+                  </p>
+                  <NewsletterSignup />
+                </div>
+
+                <div className="border-t border-pr-cream/10 pt-6 space-y-4">
+                  <div className="flex items-start gap-3">
+                    <ShieldCheck size={14} className="mt-0.5 shrink-0 text-pr-nude/72" aria-hidden="true" />
+                    <p className="font-body text-xs leading-5 text-pr-cream/64">
+                      Privacy: Your data is secure and never shared.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Globe2 size={14} className="mt-0.5 shrink-0 text-pr-nude/72" aria-hidden="true" />
+                    <a
+                      href={SITE_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-body text-xs text-pr-cream/70 transition-colors duration-300 hover:text-pr-cream break-all"
+                    >
+                      {websiteLabel}
+                    </a>
+                  </div>
+                  <div>
+                    <Link
+                      href="/privacy-policy"
+                      className="inline-flex items-center gap-2 font-body text-xs text-pr-cream/70 transition-colors duration-300 hover:text-pr-cream"
+                    >
+                      Privacy Policy
+                      <ArrowUpRight size={10} aria-hidden="true" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

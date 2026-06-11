@@ -138,7 +138,7 @@ export const SOCIALS = {
   calendly: 'https://calendly.com',
   linkedln: 'https://www.linkedin.com/in/the-p-r-lab-africa-337a89410/',
   youtube: 'https://youtube.com/@theprlabafrica',
-  mailBox: 'theprlabafrica@gmail.com',
+  mailBox: 'info@theprlabafrica.co',
   pinterest: 'https://pinterest.com/theprlabafrica/',
   tiktok: 'https://www.tiktok.com/@theprlabafrica'
 };
@@ -147,3 +147,4 @@ export const CLINIC_INFO = {
   name: 'THE AESTHETIC CLINIC',
   partnership: 'Clinical collaboration partner',
 };
+
