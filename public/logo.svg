@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="THE P.R. LAB">
+  <rect width="64" height="64" fill="#f6efe6"/>
+  <rect x="7" y="7" width="50" height="50" fill="none" stroke="#2a2420" stroke-width="2"/>
+  <text x="32" y="31" fill="#2a2420" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="1">P.R</text>
+  <text x="32" y="44" fill="#8c7d72" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="700" text-anchor="middle" letter-spacing="1.6">LAB</text>
+</svg>

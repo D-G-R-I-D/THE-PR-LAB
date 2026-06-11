@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   description: 'Hybrid Aesthetic Testing & Communications Studio. Skin Performance. Beauty Intelligence. Clinical Communication.',
   keywords: ['aesthetic testing', 'beauty intelligence', 'skin protocols', 'clinical communication'],
   authors: [{ name: 'THE P.R. LAB' }],
+  icons: {
+    icon: [{ url: '/picture1.png', type: 'image/png+xml' }],
+    shortcut: ['/picture1.png'],
+  },
   openGraph: {
     title: 'THE P.R. LAB - Where Beauty Meets Proof',
     description: 'Hybrid Aesthetic Testing & Communications Studio',
