@@ -34,34 +34,35 @@ const stories: Story[] = [
   },
   {
     id: 3,
-    name: "Tomi's Reset",
-    image: '/images/Pictures7.png',
-    shortWriteup: 'Her pigmentation journey became structured, visible, and hopeful.',
+    name: "Clarisse Ndayishimiye",
+    image: '/images/ptncoffee.png',
+    shortWriteup: "A trusted coffee partner serving exceptional Burundian coffee to The P.R. Lab's clients every day.",
     fullWriteup:
-      "Amara had tried too many brightening products without a plan. Her protocol paired targeted treatments with patient home care, so progress became measurable instead of random. Over time, the darker patches softened, radiance came back, and she understood exactly why each step mattered.",
-    shape: 'story-shape-bloom',
+      'Clarisse\'s specialty coffee stands out. Today, our carefully sourced Burundian coffee is served to clients and guests visiting The P.R. Lab, creating a warm and memorable experience that reflects excellence, authenticity, and premium African craftsmanship.',
+    shape: 'story-shape-pebble',
   },
   {
     id: 4,
-    name: "Kemi's Confidence",
-    image: '/images/Pictures10.png',
-    shortWriteup: 'Fine lines looked softer while her skin kept its natural character.',
+    name: "Sandrine Irakoze",
+    image: '/images/sandrine_beauty.png',
+    shortWriteup:
+      "A beauty founder whose products gained greater credibility through partnership with The P.R. Lab.",
     fullWriteup:
-      "Kemi wanted refinement without losing herself in the process. Her plan focused on hydration, renewal, and skin strength, creating a fresher look that still felt natural. The result was smoother makeup, brighter bare skin, and a softer expression that looked like rest, not alteration.",
-    shape: 'story-shape-arch',
+      "Sandrine needed   a partner that believed in building African beauty brands. Working with The P.R. Lab gave her access to a professional environment where science, quality, and brand excellence come together. From the welcoming atmosphere to the rigorous standards.",
+    shape: "story-shape-arch",
   },
   {
     id: 5,
-    name: "Zain's Clarity",
-    image: '/images/Pictures11.png',
-    shortWriteup: 'Breakouts became less frequent, less inflamed, and less confusing.',
+    name: "ZNiyonkuru Amina",
+    image: '/images/success3.png',
+    shortWriteup: 'Founder, Divine\'s Glow Bujumbura, Burundi...',
     fullWriteup:
-      "Zain needed more than another cleanser. The protocol tracked triggers, simplified active ingredients, and treated recovery as seriously as exfoliation. The change was gradual and grounded: fewer flare-ups, faster healing, and the confidence of knowing what to do when his skin changed.",
+      "The P.R. Lab tested and certified my beauty products, giving my brand the credibility, premium value, and proof needed to earn customer trust home and abroad.",
     shape: 'story-shape-orb',
   },
 ];
 
-const loopedStories = [...stories, ...stories, ...stories];
+const loopedStories = [...stories, ...stories, ...stories, ...stories];
 
 type MouseDragState = {
   active: boolean;

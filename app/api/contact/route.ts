@@ -183,15 +183,15 @@ async function sendAdminNotification(contactData: {
     
     // Parse CC emails from environment variable (comma-separated)
     // Example: "admin1@example.com,admin2@example.com"
-    const bccEmails = process.env.ADMIN_BCC_EMAILS 
-      ? process.env.ADMIN_BCC_EMAILS.split(',').map(email => email.trim()).filter(email => email)
-      : [];
+    // const bccEmails = process.env.ADMIN_BCC_EMAILS 
+    //   ? process.env.ADMIN_BCC_EMAILS.split(',').map(email => email.trim()).filter(email => email)
+    //   : [];
 
     const adminMail1 = process.env.ADMIN_EMAIL1 || 'info@theprlabafrica.co'  
     const result = await resend.emails.send({
       from: 'THE P.R. LAB AFRICA <info@theprlabafrica.co>',
       to: adminMail1,
-      ...(bccEmails.length > 0 && { bcc: bccEmails }),
+      // ...(bccEmails.length > 0 && { bcc: bccEmails }),
       subject: `New Contact: ${contactData.name}`,
       html: `
         <div style="background: linear-gradient(135deg, #f5f1ed 0%, #faf8f6 100%); padding: 40px 20px; font-family: 'Segoe UI', Arial, sans-serif; width: 100%;">

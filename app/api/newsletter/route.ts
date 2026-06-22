@@ -188,14 +188,14 @@ async function sendAdminNotification(userEmail: string): Promise<boolean> {
     
     // Parse CC emails from environment variable (comma-separated)
     // Example: "admin1@example.com,admin2@example.com"
-    const bccEmails = process.env.ADMIN_BCC_EMAILS 
-      ? process.env.ADMIN_BCC_EMAILS.split(',').map(email => email.trim()).filter(email => email)
-      : [];
+    // const bccEmails = process.env.ADMIN_BCC_EMAILS 
+    //   ? process.env.ADMIN_BCC_EMAILS.split(',').map(email => email.trim()).filter(email => email)
+    //   : [];
     
     const result = await resend.emails.send({
       from: 'THE P.R. LAB AFRICA <noreply@theprlabafrica.co>',
       to: adminMail1,
-      ...(bccEmails.length > 0 && { bcc: bccEmails }),
+      // ...(bccEmails.length > 0 && { bcc: bccEmails }),
       subject: 'New Newsletter Subscriber',
       html: `
         <div style="background: linear-gradient(135deg, #f5f1ed 0%, #faf8f6 100%); padding: 40px 20px; font-family: 'Segoe UI', Arial, sans-serif; min-height: 100vh;">

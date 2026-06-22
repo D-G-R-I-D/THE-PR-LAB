@@ -1,6 +1,8 @@
 'use client';
 
 import { CalendarDays, Clock, MapPin, Sparkles } from 'lucide-react';
+import { useEffect } from 'react';
+import styles from '@/styles/BookAppointment.module.css';
 
 const appointmentTypes = [
   {
@@ -29,9 +31,24 @@ const appointmentTypes = [
   },
 ];
 
-const calendlyUrl = 'https://calendly.com';
+const CALENDLY_URL = 'https://calendly.com/theprlabafrica?text_color=2a2420&primary_color=2a2420';
 
 const BookAppointment = () => {
+  useEffect(() => {
+    // Load Calendly widget script
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup if needed
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <section id="book-appointment" className="relative w-full bg-white py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-8">
@@ -78,11 +95,9 @@ const BookAppointment = () => {
           </div>
 
           <div className="border border-pr-cream bg-pr-cream/35 p-3 md:p-4">
-            <iframe
-              src={calendlyUrl}
-              title="Calendly appointment scheduler"
-              className="h-[720px] w-full bg-white"
-              loading="lazy"
+            <div 
+              className={`calendly-inline-widget ${styles.calendlyWidget}`}
+              data-url={CALENDLY_URL}
             />
           </div>
         </div>

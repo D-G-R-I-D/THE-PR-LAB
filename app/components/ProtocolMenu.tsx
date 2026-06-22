@@ -35,12 +35,19 @@ const protocols = [
     image: '/images/Pictures3.png',
   },
   {
+    title: 'Inner Circle ',
+    eyebrow: '06 / Silent',
+    summary: 'The Inner Circle.',
+    details: ['Priority scheduling', 'Monthly protocol rhythm', 'Coffee with...'],
+    image: '/images/Innercircle4.png',
+  },
+  {
     title: 'Elite Membership',
     eyebrow: '05 / Ongoing proof',
     summary: 'A high-touch continuity model for clients who want regular skin intelligence and maintenance.',
     details: ['Priority scheduling', 'Monthly protocol rhythm', 'Long-term skin documentation'],
-    image: '/images/Innercircle4.png',
-  },
+    image: '/images/elite_M.png',
+  }
 ];
 
 const ProtocolMenu = () => {
